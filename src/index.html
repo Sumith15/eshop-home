@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eShop - Home</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- Google Fonts: Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      body { font-family: 'Roboto', sans-serif; }
+    </style>
+  </head>
+  <body class="bg-sky-50">
+    <!-- Navbar -->
+    <nav class="sticky top-0 z-50 bg-gradient-to-r from-sky-400 to-sky-600 shadow-lg">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-gem text-white text-2xl"></i>
+          <span class="text-white text-2xl font-bold tracking-wide">eShop</span>
+        </div>
+        <ul class="flex gap-6 text-white font-medium">
+          <li><a href="#home" class="hover:text-sky-200">Home</a></li>
+          <li><a href="#features" class="hover:text-sky-200">Features</a></li>
+          <li><a href="#products" class="hover:text-sky-200">Products</a></li>
+          <li><a href="#catalog" class="hover:text-sky-200">Catalog</a></li>
+        </ul>
+        <div class="relative">
+          <i class="fa-solid fa-cart-shopping text-white text-2xl"></i>
+          <span class="absolute -top-2 -right-2 bg-white text-sky-600 text-xs font-bold rounded-full px-2 py-0.5">3</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 bg-gradient-to-br from-sky-100 to-white">
+      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-sky-500 to-sky-800 text-transparent bg-clip-text mb-4">Welcome to eShop</h1>
+          <p class="text-lg text-sky-800 mb-6">Your one-stop shop for the latest trends, best deals, and top quality products. Shop smart, shop with us!</p>
+          <div class="flex gap-4">
+            <a href="#products" class="px-6 py-3 bg-sky-500 text-white rounded-lg shadow hover:bg-sky-600 transition">Shop Now</a>
+            <a href="#features" class="px-6 py-3 bg-white text-sky-600 border border-sky-500 rounded-lg shadow hover:bg-sky-100 transition">Learn More</a>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center">
+          <div class="bg-white/60 backdrop-blur-lg rounded-3xl shadow-lg p-8 flex flex-col items-center">
+            <img src="https://images.unsplash.com/photo-1513708927688-890fe41c3b6b?auto=format&fit=facearea&w=400&q=80" alt="Featured Product" class="w-48 h-48 object-cover rounded-2xl mb-4 shadow-md" />
+            <span class="text-sky-700 font-semibold">Featured Collection</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="py-10 bg-white">
+      <div class="max-w-4xl mx-auto">
+        <div class="relative" id="carousel">
+          <div class="overflow-hidden rounded-2xl shadow-lg">
+            <div class="flex transition-transform duration-700" id="carousel-inner">
+              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 1" />
+              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 2" />
+              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 3" />
+            </div>
+          </div>
+          <button id="carousel-prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-sky-200 text-sky-700 rounded-full p-2 shadow"><i class="fa fa-chevron-left"></i></button>
+          <button id="carousel-next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-sky-200 text-sky-700 rounded-full p-2 shadow"><i class="fa fa-chevron-right"></i></button>
+          <div class="flex justify-center gap-2 mt-4" id="carousel-indicators">
+            <span class="w-3 h-3 bg-sky-400 rounded-full inline-block"></span>
+            <span class="w-3 h-3 bg-sky-200 rounded-full inline-block"></span>
+            <span class="w-3 h-3 bg-sky-200 rounded-full inline-block"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-gradient-to-br from-sky-50 to-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-sky-800 mb-10 text-center">Why Shop With Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-star text-sky-500 text-2xl"></i></div>
+            <h3 class="font-semibold text-sky-700 mb-2">Top Quality</h3>
+            <p class="text-sky-600 text-center">We offer only the best products, handpicked for quality and reliability.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-truck-fast text-sky-500 text-2xl"></i></div>
+            <h3 class="font-semibold text-sky-700 mb-2">Fast Delivery</h3>
+            <p class="text-sky-600 text-center">Lightning-fast shipping to your doorstep, every time.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-rotate-left text-sky-500 text-2xl"></i></div>
+            <h3 class="font-semibold text-sky-700 mb-2">Easy Returns</h3>
+            <p class="text-sky-600 text-center">Hassle-free returns and exchanges for your peace of mind.</p>
+          </div>
+          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
+            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-tags text-sky-500 text-2xl"></i></div>
+            <h3 class="font-semibold text-sky-700 mb-2">Best Prices</h3>
+            <p class="text-sky-600 text-center">Unbeatable prices and exclusive deals you won't find elsewhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid Section -->
+    <section id="products" class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-sky-800 mb-10 text-center">Trending Products</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <!-- Product Card Example -->
+          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&q=80" alt="Product 1" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-semibold text-sky-700 mb-1">Wireless Headphones</h3>
+            <div class="flex items-center gap-1 mb-2">
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star-half-alt text-yellow-400"></i>
+            </div>
+            <span class="text-sky-600 font-bold text-lg mb-2">$59.99</span>
+            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
+            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=facearea&w=400&q=80" alt="Product 2" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-semibold text-sky-700 mb-1">Smart Watch</h3>
+            <div class="flex items-center gap-1 mb-2">
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+            </div>
+            <span class="text-sky-600 font-bold text-lg mb-2">$99.99</span>
+            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
+            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=facearea&w=400&q=80" alt="Product 3" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-semibold text-sky-700 mb-1">Bluetooth Speaker</h3>
+            <div class="flex items-center gap-1 mb-2">
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-slate-300"></i>
+            </div>
+            <span class="text-sky-600 font-bold text-lg mb-2">$39.99</span>
+            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
+          </div>
+          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
+            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=facearea&w=400&q=80" alt="Product 4" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-semibold text-sky-700 mb-1">VR Headset</h3>
+            <div class="flex items-center gap-1 mb-2">
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star text-yellow-400"></i>
+              <i class="fa fa-star-half-alt text-yellow-400"></i>
+              <i class="fa fa-star text-slate-300"></i>
+            </div>
+            <span class="text-sky-600 font-bold text-lg mb-2">$149.99</span>
+            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Catalog Table -->
+    <section id="catalog" class="py-16 bg-sky-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-sky-800 mb-8 text-center">Product Catalog</h2>
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white rounded-xl shadow-lg">
+            <thead class="bg-gradient-to-r from-sky-400 to-sky-600 text-white">
+              <tr>
+                <th class="py-3 px-4 text-left">Product</th>
+                <th class="py-3 px-4 text-left">Category</th>
+                <th class="py-3 px-4 text-left">Price</th>
+                <th class="py-3 px-4 text-left">Stock</th>
+                <th class="py-3 px-4 text-left">Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-sky-50">
+                <td class="py-3 px-4">Wireless Headphones</td>
+                <td class="py-3 px-4">Electronics</td>
+                <td class="py-3 px-4">$59.99</td>
+                <td class="py-3 px-4">In Stock</td>
+                <td class="py-3 px-4">4.5 <i class="fa fa-star text-yellow-400"></i></td>
+              </tr>
+              <tr class="hover:bg-sky-50">
+                <td class="py-3 px-4">Smart Watch</td>
+                <td class="py-3 px-4">Wearables</td>
+                <td class="py-3 px-4">$99.99</td>
+                <td class="py-3 px-4">In Stock</td>
+                <td class="py-3 px-4">5.0 <i class="fa fa-star text-yellow-400"></i></td>
+              </tr>
+              <tr class="hover:bg-sky-50">
+                <td class="py-3 px-4">Bluetooth Speaker</td>
+                <td class="py-3 px-4">Audio</td>
+                <td class="py-3 px-4">$39.99</td>
+                <td class="py-3 px-4">Out of Stock</td>
+                <td class="py-3 px-4">4.0 <i class="fa fa-star text-yellow-400"></i></td>
+              </tr>
+              <tr class="hover:bg-sky-50">
+                <td class="py-3 px-4">VR Headset</td>
+                <td class="py-3 px-4">Gadgets</td>
+                <td class="py-3 px-4">$149.99</td>
+                <td class="py-3 px-4">In Stock</td>
+                <td class="py-3 px-4">4.0 <i class="fa fa-star text-yellow-400"></i></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <div class="flex justify-center items-center gap-2 mb-16">
+      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">&lt;</button>
+      <button class="px-3 py-1 rounded bg-sky-500 text-white font-bold">1</button>
+      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">2</button>
+      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">3</button>
+      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">&gt;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-sky-400 to-sky-600 text-white py-10">
+      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fa-solid fa-gem text-2xl"></i>
+            <span class="text-xl font-bold">eShop</span>
+          </div>
+          <p class="text-sky-100">Your trusted online store for quality and value.</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">Company</h4>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">About Us</a></li>
+            <li><a href="#" class="hover:underline">Careers</a></li>
+            <li><a href="#" class="hover:underline">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">Support</h4>
+          <ul class="space-y-1">
+            <li><a href="#" class="hover:underline">Help Center</a></li>
+            <li><a href="#" class="hover:underline">Returns</a></li>
+            <li><a href="#" class="hover:underline">Shipping</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">Newsletter</h4>
+          <form class="flex gap-2">
+            <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l bg-white text-sky-700 focus:outline-none" />
+            <button type="submit" class="px-4 py-2 bg-sky-700 rounded-r text-white font-bold hover:bg-sky-800">Subscribe</button>
+          </form>
+          <div class="flex gap-3 mt-4">
+            <a href="#" class="hover:text-sky-200"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover:text-sky-200"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-sky-200"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center text-sky-100 mt-8">&copy; 2025 eShop. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating Action Button (Scroll to Top) -->
+    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-sky-400 to-sky-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition hidden z-50">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="js/index.js"></script>
+  </body>
+</html>

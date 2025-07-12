@@ -1,0 +1,32 @@
+/* Custom styles for eShop */
+body {
+  background: linear-gradient(135deg, #e0f2fe 0%, #fff 100%);
+}
+
+/* Glassmorphism effect for hero card */
+.hero-glass {
+  background: rgba(255,255,255,0.6);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 2rem;
+}
+
+/* Floating action button animation */
+#scrollToTop {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+#scrollToTop:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px 0 rgba(56,189,248,0.3);
+}
+
+/* Newsletter input focus */
+footer input[type="email"]:focus {
+  border: 2px solid #38bdf8;
+  outline: none;
+}
+
+/* Custom carousel transition for smoothness */
+#carousel-inner {
+  will-change: transform;
+}
