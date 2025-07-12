@@ -1,284 +1,714 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eShop - Home</title>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop - Your one stop shop for all things tech</title>
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- Google Fonts: Roboto -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome CDN version 6.5.0-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/index.css" />
-    <style>
-      body { font-family: 'Roboto', sans-serif; }
-    </style>
-  </head>
-  <body class="bg-sky-50">
-    <!-- Navbar -->
-    <nav class="sticky top-0 z-50 bg-gradient-to-r from-sky-400 to-sky-600 shadow-lg">
-      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <i class="fa-solid fa-gem text-white text-2xl"></i>
-          <span class="text-white text-2xl font-bold tracking-wide">eShop</span>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <!-- Modern Navbar with Sky Blue Theme -->
+    <nav class="bg-sky-500 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto">
+            <div class="flex justify-between items-center">
+                <h1 class="text-white text-3xl font-bold animate-slide-in">
+                    <i class="fas fa-gem mr-2"></i>eShop
+                </h1>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#home"
+                            class="text-white hover:text-sky-100 transition-all duration-300 font-medium px-3 py-2 rounded hover:bg-white/10">
+                            <i class="fas fa-home mr-1"></i>Home</a></li>
+                    <li><a href="#products"
+                            class="text-white hover:text-sky-100 transition-all duration-300 font-medium px-3 py-2 rounded hover:bg-white/10">
+                            <i class="fas fa-shopping-bag mr-1"></i>Products</a></li>
+                    <li><a href="#about"
+                            class="text-white hover:text-sky-100 transition-all duration-300 font-medium px-3 py-2 rounded hover:bg-white/10">
+                            <i class="fas fa-info-circle mr-1"></i>About</a></li>
+                    <li><a href="#contact"
+                            class="text-white hover:text-sky-100 transition-all duration-300 font-medium px-3 py-2 rounded hover:bg-white/10">
+                            <i class="fas fa-envelope mr-1"></i>Contact</a></li>
+                    <li><a href="#cart"
+                            class="text-white hover:text-sky-100 transition-all duration-300 font-medium px-3 py-2 rounded hover:bg-white/10 relative">
+                            <i class="fas fa-shopping-cart mr-1"></i>Cart
+                            <span
+                                class="absolute -top-1 -right-1 bg-sky-200 text-sky-800 text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">5</span>
+                        </a></li>
+                </ul>
+                <button class="md:hidden text-white hover:text-emerald-200 text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
         </div>
-        <ul class="flex gap-6 text-white font-medium">
-          <li><a href="#home" class="hover:text-sky-200">Home</a></li>
-          <li><a href="#features" class="hover:text-sky-200">Features</a></li>
-          <li><a href="#products" class="hover:text-sky-200">Products</a></li>
-          <li><a href="#catalog" class="hover:text-sky-200">Catalog</a></li>
-        </ul>
-        <div class="relative">
-          <i class="fa-solid fa-cart-shopping text-white text-2xl"></i>
-          <span class="absolute -top-2 -right-2 bg-white text-sky-600 text-xs font-bold rounded-full px-2 py-0.5">3</span>
-        </div>
-      </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="py-16 bg-gradient-to-br from-sky-100 to-white">
-      <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-4">
-        <div class="flex-1">
-          <h1 class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-sky-500 to-sky-800 text-transparent bg-clip-text mb-4">Welcome to eShop</h1>
-          <p class="text-lg text-sky-800 mb-6">Your one-stop shop for the latest trends, best deals, and top quality products. Shop smart, shop with us!</p>
-          <div class="flex gap-4">
-            <a href="#products" class="px-6 py-3 bg-sky-500 text-white rounded-lg shadow hover:bg-sky-600 transition">Shop Now</a>
-            <a href="#features" class="px-6 py-3 bg-white text-sky-600 border border-sky-500 rounded-lg shadow hover:bg-sky-100 transition">Learn More</a>
-          </div>
-        </div>
-        <div class="flex-1 flex justify-center">
-          <div class="bg-white/60 backdrop-blur-lg rounded-3xl shadow-lg p-8 flex flex-col items-center">
-            <img src="https://images.unsplash.com/photo-1513708927688-890fe41c3b6b?auto=format&fit=facearea&w=400&q=80" alt="Featured Product" class="w-48 h-48 object-cover rounded-2xl mb-4 shadow-md" />
-            <span class="text-sky-700 font-semibold">Featured Collection</span>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Carousel Section -->
-    <section class="py-10 bg-white">
-      <div class="max-w-4xl mx-auto">
-        <div class="relative" id="carousel">
-          <div class="overflow-hidden rounded-2xl shadow-lg">
-            <div class="flex transition-transform duration-700" id="carousel-inner">
-              <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 1" />
-              <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 2" />
-              <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=800&q=80" class="w-full h-64 object-cover" alt="Slide 3" />
-            </div>
-          </div>
-          <button id="carousel-prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-sky-200 text-sky-700 rounded-full p-2 shadow"><i class="fa fa-chevron-left"></i></button>
-          <button id="carousel-next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-sky-200 text-sky-700 rounded-full p-2 shadow"><i class="fa fa-chevron-right"></i></button>
-          <div class="flex justify-center gap-2 mt-4" id="carousel-indicators">
-            <span class="w-3 h-3 bg-sky-400 rounded-full inline-block"></span>
-            <span class="w-3 h-3 bg-sky-200 rounded-full inline-block"></span>
-            <span class="w-3 h-3 bg-sky-200 rounded-full inline-block"></span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div id="home" class="content container mx-auto mt-10 px-4">
 
-    <!-- Features Section -->
-    <section id="features" class="py-16 bg-gradient-to-br from-sky-50 to-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-sky-800 mb-10 text-center">Why Shop With Us?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-star text-sky-500 text-2xl"></i></div>
-            <h3 class="font-semibold text-sky-700 mb-2">Top Quality</h3>
-            <p class="text-sky-600 text-center">We offer only the best products, handpicked for quality and reliability.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-truck-fast text-sky-500 text-2xl"></i></div>
-            <h3 class="font-semibold text-sky-700 mb-2">Fast Delivery</h3>
-            <p class="text-sky-600 text-center">Lightning-fast shipping to your doorstep, every time.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-rotate-left text-sky-500 text-2xl"></i></div>
-            <h3 class="font-semibold text-sky-700 mb-2">Easy Returns</h3>
-            <p class="text-sky-600 text-center">Hassle-free returns and exchanges for your peace of mind.</p>
-          </div>
-          <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center">
-            <div class="bg-sky-100 p-4 rounded-full mb-4"><i class="fa fa-tags text-sky-500 text-2xl"></i></div>
-            <h3 class="font-semibold text-sky-700 mb-2">Best Prices</h3>
-            <p class="text-sky-600 text-center">Unbeatable prices and exclusive deals you won't find elsewhere.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+        <!-- Hero Section -->
+        <section class="text-center mb-16 animate-fade-in-up">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-6xl md:text-7xl font-bold mb-6 gradient-text">
+                    Welcome to eShop
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+                    Your premium destination for cutting-edge technology and innovative products
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <button
+                        class="bg-sky-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl animate-pulse-hover">
+                        <i class="fas fa-rocket mr-2"></i>Start Shopping
+                    </button>
+                    <button
+                        class="bg-transparent border-2 border-sky-500 text-sky-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-sky-500 hover:text-white transition-all duration-300">
+                        <i class="fas fa-play mr-2"></i>Watch Demo
+                    </button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="glass-card p-6 rounded-xl floating">
+                        <div class="bg-sky-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-truck text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Free Shipping</h3>
+                        <p class="text-gray-600">Free delivery on orders over $75 worldwide</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl floating" style="animation-delay: 0.2s;">
+                        <div class="bg-sky-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-alt text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Secure Payment</h3>
+                        <p class="text-gray-600">100% secure and encrypted transactions</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl floating" style="animation-delay: 0.4s;">
+                        <div class="bg-sky-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+                        <p class="text-gray-600">Round-the-clock customer service</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Product Grid Section -->
-    <section id="products" class="py-16 bg-white">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-sky-800 mb-10 text-center">Trending Products</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          <!-- Product Card Example -->
-          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
-            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=400&q=80" alt="Product 1" class="w-32 h-32 object-cover rounded-lg mb-3" />
-            <h3 class="font-semibold text-sky-700 mb-1">Wireless Headphones</h3>
-            <div class="flex items-center gap-1 mb-2">
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star-half-alt text-yellow-400"></i>
+        <!-- Enhanced Carousel Section -->
+        <section id="carousel-section" class="mb-16 animate-fade-in-up">
+            <h2 class="text-4xl font-bold text-center mb-8 gradient-text">Featured Collections</h2>
+            <div class="relative max-w-6xl mx-auto">
+                <div class="carousel-container overflow-hidden rounded-2xl shadow-2xl">
+                    <div class="carousel-inner flex transition-transform duration-700 ease-in-out" id="carousel">
+                        <div class="carousel-item w-full flex-shrink-0 relative">
+                            <img src="https://placehold.co/1200x500/0EA5E9/FFFFFF?text=Premium+Gaming+Setup"
+                                class="w-full h-96 object-cover" alt="Gaming Collection">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-sky-900/70 to-transparent flex items-center">
+                                <div class="text-white p-12">
+                                    <h3 class="text-4xl font-bold mb-4">Gaming Revolution</h3>
+                                    <p class="text-xl mb-6">Discover our latest gaming peripherals and accessories</p>
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                                        Explore Gaming
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-full flex-shrink-0 relative">
+                            <img src="https://placehold.co/1200x500/0284C7/FFFFFF?text=Smart+Home+Tech"
+                                class="w-full h-96 object-cover" alt="Smart Home">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-sky-800/70 to-transparent flex items-center">
+                                <div class="text-white p-12">
+                                    <h3 class="text-4xl font-bold mb-4">Smart Home Solutions</h3>
+                                    <p class="text-xl mb-6">Transform your home with intelligent technology</p>
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                                        Shop Smart Home
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item w-full flex-shrink-0 relative">
+                            <img src="https://placehold.co/1200x500/0369A1/FFFFFF?text=Mobile+Accessories"
+                                class="w-full h-96 object-cover" alt="Mobile Accessories">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-r from-sky-700/70 to-transparent flex items-center">
+                                <div class="text-white p-12">
+                                    <h3 class="text-4xl font-bold mb-4">Mobile Excellence</h3>
+                                    <p class="text-xl mb-6">Premium accessories for your mobile lifestyle</p>
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300">
+                                        View Accessories
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="previousSlide()"
+                    class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+                <button onclick="nextSlide()"
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 backdrop-blur-md text-white p-4 rounded-full hover:bg-white/30 transition-all duration-300">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
+                <div class="flex justify-center mt-6 space-x-3">
+                    <button onclick="goToSlide(0)"
+                        class="carousel-indicator w-4 h-4 rounded-full bg-sky-500 opacity-50 hover:opacity-100 transition-all duration-300"></button>
+                    <button onclick="goToSlide(1)"
+                        class="carousel-indicator w-4 h-4 rounded-full bg-sky-500 opacity-50 hover:opacity-100 transition-all duration-300"></button>
+                    <button onclick="goToSlide(2)"
+                        class="carousel-indicator w-4 h-4 rounded-full bg-sky-500 opacity-50 hover:opacity-100 transition-all duration-300"></button>
+                </div>
             </div>
-            <span class="text-sky-600 font-bold text-lg mb-2">$59.99</span>
-            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
-            <img src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=facearea&w=400&q=80" alt="Product 2" class="w-32 h-32 object-cover rounded-lg mb-3" />
-            <h3 class="font-semibold text-sky-700 mb-1">Smart Watch</h3>
-            <div class="flex items-center gap-1 mb-2">
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-            </div>
-            <span class="text-sky-600 font-bold text-lg mb-2">$99.99</span>
-            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
-            <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=facearea&w=400&q=80" alt="Product 3" class="w-32 h-32 object-cover rounded-lg mb-3" />
-            <h3 class="font-semibold text-sky-700 mb-1">Bluetooth Speaker</h3>
-            <div class="flex items-center gap-1 mb-2">
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-slate-300"></i>
-            </div>
-            <span class="text-sky-600 font-bold text-lg mb-2">$39.99</span>
-            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
-          </div>
-          <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center hover:scale-105 transition">
-            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=facearea&w=400&q=80" alt="Product 4" class="w-32 h-32 object-cover rounded-lg mb-3" />
-            <h3 class="font-semibold text-sky-700 mb-1">VR Headset</h3>
-            <div class="flex items-center gap-1 mb-2">
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star text-yellow-400"></i>
-              <i class="fa fa-star-half-alt text-yellow-400"></i>
-              <i class="fa fa-star text-slate-300"></i>
-            </div>
-            <span class="text-sky-600 font-bold text-lg mb-2">$149.99</span>
-            <button class="bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition"><i class="fa fa-cart-plus mr-2"></i>Add to Cart</button>
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <!-- Product Catalog Table -->
-    <section id="catalog" class="py-16 bg-sky-50">
-      <div class="max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-sky-800 mb-8 text-center">Product Catalog</h2>
-        <div class="overflow-x-auto">
-          <table class="min-w-full bg-white rounded-xl shadow-lg">
-            <thead class="bg-gradient-to-r from-sky-400 to-sky-600 text-white">
-              <tr>
-                <th class="py-3 px-4 text-left">Product</th>
-                <th class="py-3 px-4 text-left">Category</th>
-                <th class="py-3 px-4 text-left">Price</th>
-                <th class="py-3 px-4 text-left">Stock</th>
-                <th class="py-3 px-4 text-left">Rating</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="hover:bg-sky-50">
-                <td class="py-3 px-4">Wireless Headphones</td>
-                <td class="py-3 px-4">Electronics</td>
-                <td class="py-3 px-4">$59.99</td>
-                <td class="py-3 px-4">In Stock</td>
-                <td class="py-3 px-4">4.5 <i class="fa fa-star text-yellow-400"></i></td>
-              </tr>
-              <tr class="hover:bg-sky-50">
-                <td class="py-3 px-4">Smart Watch</td>
-                <td class="py-3 px-4">Wearables</td>
-                <td class="py-3 px-4">$99.99</td>
-                <td class="py-3 px-4">In Stock</td>
-                <td class="py-3 px-4">5.0 <i class="fa fa-star text-yellow-400"></i></td>
-              </tr>
-              <tr class="hover:bg-sky-50">
-                <td class="py-3 px-4">Bluetooth Speaker</td>
-                <td class="py-3 px-4">Audio</td>
-                <td class="py-3 px-4">$39.99</td>
-                <td class="py-3 px-4">Out of Stock</td>
-                <td class="py-3 px-4">4.0 <i class="fa fa-star text-yellow-400"></i></td>
-              </tr>
-              <tr class="hover:bg-sky-50">
-                <td class="py-3 px-4">VR Headset</td>
-                <td class="py-3 px-4">Gadgets</td>
-                <td class="py-3 px-4">$149.99</td>
-                <td class="py-3 px-4">In Stock</td>
-                <td class="py-3 px-4">4.0 <i class="fa fa-star text-yellow-400"></i></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
+        <!-- Features Section -->
+        <section id="about" class="mb-16 animate-fade-in-up">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Why Choose eShop?</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're committed to providing you with the best
+                    shopping experience and premium quality products</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-sky-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Premium Quality</h3>
+                    <p class="text-gray-600">Only the finest products from trusted brands</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-sky-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fast Delivery</h3>
+                    <p class="text-gray-600">Lightning-fast shipping to your doorstep</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-sky-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-undo text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Easy Returns</h3>
+                    <p class="text-gray-600">Hassle-free 30-day return policy</p>
+                </div>
+                <div class="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="bg-sky-500 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tags text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Best Prices</h3>
+                    <p class="text-gray-600">Competitive prices with exclusive deals</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Pagination -->
-    <div class="flex justify-center items-center gap-2 mb-16">
-      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">&lt;</button>
-      <button class="px-3 py-1 rounded bg-sky-500 text-white font-bold">1</button>
-      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">2</button>
-      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">3</button>
-      <button class="px-3 py-1 rounded bg-sky-200 text-sky-700 hover:bg-sky-300">&gt;</button>
+        <!-- Product Grid -->
+        <section id="products" class="mb-16 animate-fade-in-up">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Trending Products</h2>
+                <p class="text-xl text-gray-600">Discover our most popular items loved by customers worldwide</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="product-card animate-fade-in-up">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/8B5CF6/FFFFFF?text=Gaming+Headset" alt="Gaming Headset">
+                        <span
+                            class="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">-25%</span>
+                    </div>
+                    <h2>Premium Gaming Headset</h2>
+                    <p>7.1 surround sound with noise cancellation and RGB lighting for the ultimate gaming experience.
+                    </p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$89.99</span>
+                            <span class="text-gray-400 line-through ml-2">$119.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-card animate-fade-in-up" style="animation-delay: 0.1s;">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/10B981/FFFFFF?text=Wireless+Charger"
+                            alt="Wireless Charger">
+                        <span
+                            class="absolute top-3 right-3 bg-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold">New</span>
+                    </div>
+                    <h2>Fast Wireless Charger</h2>
+                    <p>15W fast charging with LED indicator and overheat protection for all Qi-enabled devices.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$34.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★☆</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-card animate-fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/F59E0B/FFFFFF?text=Smart+Watch" alt="Smart Watch">
+                        <span
+                            class="absolute top-3 right-3 bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-bold">Hot</span>
+                    </div>
+                    <h2>Fitness Smart Watch</h2>
+                    <p>Advanced health monitoring with GPS tracking, heart rate sensor, and 7-day battery life.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$199.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-card animate-fade-in-up" style="animation-delay: 0.3s;">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/EC4899/FFFFFF?text=Bluetooth+Speaker"
+                            alt="Bluetooth Speaker">
+                        <span
+                            class="absolute top-3 right-3 bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">Sale</span>
+                    </div>
+                    <h2>Portable Bluetooth Speaker</h2>
+                    <p>360° sound with deep bass, waterproof design, and 20-hour playtime for any adventure.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$59.99</span>
+                            <span class="text-gray-400 line-through ml-2">$79.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★☆</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-card animate-fade-in-up" style="animation-delay: 0.4s;">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/6366F1/FFFFFF?text=USB-C+Hub" alt="USB-C Hub">
+                    </div>
+                    <h2>Multi-Port USB-C Hub</h2>
+                    <p>7-in-1 hub with HDMI 4K, USB 3.0, SD card reader, and fast charging support.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$45.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★★</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+
+                <div class="product-card animate-fade-in-up" style="animation-delay: 0.5s;">
+                    <div class="relative">
+                        <img src="https://placehold.co/300x200/14B8A6/FFFFFF?text=Phone+Stand" alt="Phone Stand">
+                        <span
+                            class="absolute top-3 right-3 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">Eco</span>
+                    </div>
+                    <h2>Adjustable Phone Stand</h2>
+                    <p>Eco-friendly bamboo stand with adjustable angles for phones and tablets up to 12 inches.</p>
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <span class="text-2xl font-bold text-sky-600">$19.99</span>
+                        </div>
+                        <div class="text-yellow-400 text-lg">★★★★☆</div>
+                    </div>
+                    <button class="w-full animate-pulse-hover">
+                        <i class="fas fa-cart-plus mr-2"></i>Add to Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Table with List of Products -->
+        <section class="mb-16 animate-fade-in-up">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Complete Product Catalog</h2>
+                <p class="text-xl text-gray-600">Browse our entire collection with detailed specifications</p>
+            </div>
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead class="bg-gradient-to-r from-sky-500 to-sky-600 text-white">
+                            <tr>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-cube mr-2"></i>Product
+                                </th>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-list mr-2"></i>Category
+                                </th>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-dollar-sign mr-2"></i>Price
+                                </th>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-star mr-2"></i>Rating
+                                </th>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-box mr-2"></i>Stock
+                                </th>
+                                <th class="px-6 py-4 text-left font-semibold">
+                                    <i class="fas fa-shopping-cart mr-2"></i>Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr
+                                class="hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50 transition-all duration-300">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <img src="https://placehold.co/50x50/8B5CF6/FFFFFF?text=H"
+                                            class="w-12 h-12 rounded-lg mr-3">
+                                        <div>
+                                            <div class="font-semibold">Premium Gaming Headset</div>
+                                            <div class="text-sm text-gray-500">7.1 Surround Sound</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Gaming</td>
+                                <td class="px-6 py-4">
+                                    <span class="text-2xl font-bold text-sky-600">$89.99</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="text-yellow-400 mr-2">★★★★★</div>
+                                        <span class="text-sm text-gray-600">(4.8)</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">In
+                                        Stock</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
+                                        <i class="fas fa-cart-plus mr-1"></i>Add
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr
+                                class="hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50 transition-all duration-300">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <img src="https://placehold.co/50x50/10B981/FFFFFF?text=C"
+                                            class="w-12 h-12 rounded-lg mr-3">
+                                        <div>
+                                            <div class="font-semibold">Fast Wireless Charger</div>
+                                            <div class="text-sm text-gray-500">15W Fast Charging</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Accessories</td>
+                                <td class="px-6 py-4">
+                                    <span class="text-2xl font-bold text-sky-600">$34.99</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="text-yellow-400 mr-2">★★★★☆</div>
+                                        <span class="text-sm text-gray-600">(4.3)</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-sm">In
+                                        Stock</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
+                                        <i class="fas fa-cart-plus mr-1"></i>Add
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr
+                                class="hover:bg-gradient-to-r hover:from-sky-50 hover:to-cyan-50 transition-all duration-300">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <img src="https://placehold.co/50x50/F59E0B/FFFFFF?text=W"
+                                            class="w-12 h-12 rounded-lg mr-3">
+                                        <div>
+                                            <div class="font-semibold">Fitness Smart Watch</div>
+                                            <div class="text-sm text-gray-500">Health Monitoring</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-gray-600">Wearables</td>
+                                <td class="px-6 py-4">
+                                    <span class="text-2xl font-bold text-sky-600">$199.99</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="text-yellow-400 mr-2">★★★★★</div>
+                                        <span class="text-sm text-gray-600">(4.9)</span>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-sm">Low
+                                        Stock</span>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <button
+                                        class="bg-gradient-to-r from-sky-500 to-sky-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300">
+                                        <i class="fas fa-cart-plus mr-1"></i>Add
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enhanced Pagination -->
+        <section class="mb-16">
+            <nav class="flex justify-center">
+                <ul class="inline-flex items-center space-x-2 bg-white rounded-2xl shadow-lg p-3">
+                    <li>
+                        <a href="#"
+                            class="px-5 py-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl hover:shadow-lg transition-all duration-300">
+                            <i class="fas fa-chevron-left mr-1"></i>Previous
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-4 py-3 bg-sky-600 text-white rounded-xl hover:bg-sky-700 transition-all duration-300">1</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-4 py-3 text-sky-600 hover:bg-sky-100 rounded-xl transition-all duration-300">2</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-4 py-3 text-sky-600 hover:bg-sky-100 rounded-xl transition-all duration-300">3</a>
+                    </li>
+                    <li>
+                        <span class="px-3 py-3 text-gray-500">...</span>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-4 py-3 text-sky-600 hover:bg-sky-100 rounded-xl transition-all duration-300">10</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="px-5 py-3 bg-gradient-to-r from-sky-500 to-sky-600 text-white rounded-xl hover:shadow-lg transition-all duration-300">
+                            Next<i class="fas fa-chevron-right ml-1"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+
     </div>
 
+
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-sky-400 to-sky-600 text-white py-10">
-      <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div>
-          <div class="flex items-center gap-2 mb-2">
-            <i class="fa-solid fa-gem text-2xl"></i>
-            <span class="text-xl font-bold">eShop</span>
-          </div>
-          <p class="text-sky-100">Your trusted online store for quality and value.</p>
+    <footer id="contact" class="bg-gradient-to-r from-sky-800 via-sky-700 to-cyan-600 text-white">
+        <div class="container mx-auto px-4 py-16">
+            <!-- Newsletter Section -->
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold mb-6">Join the eShop Community</h3>
+                <p class="text-xl text-gray-300 mb-8">Get exclusive deals, early access to new products, and tech tips!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-lg mx-auto">
+                    <input type="email" placeholder="Enter your email address"
+                        class="flex-1 px-6 py-4 rounded-xl text-gray-800 bg-white focus:outline-none focus:ring-4 focus:ring-sky-400 text-lg">
+                    <button
+                        class="bg-sky-500 hover:bg-sky-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-paper-plane mr-2"></i>Subscribe
+                    </button>
+                </div>
+            </div>
+
+            <!-- Footer Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-1">
+                    <h4 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-gem mr-3 text-sky-400"></i>eShop
+                    </h4>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Your premium destination for cutting-edge technology. We bring you the latest innovations
+                        with unmatched quality and exceptional customer service.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all duration-300 group">
+                            <i class="fab fa-facebook text-xl group-hover:text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all duration-300 group">
+                            <i class="fab fa-twitter text-xl group-hover:text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all duration-300 group">
+                            <i class="fab fa-instagram text-xl group-hover:text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-sky-500 transition-all duration-300 group">
+                            <i class="fab fa-linkedin text-xl group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h5 class="text-xl font-semibold mb-6 text-sky-400">Quick Links</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#home"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-chevron-right mr-2 text-sky-400 group-hover:translate-x-1 transition-transform"></i>Home</a>
+                        </li>
+                        <li><a href="#products"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-chevron-right mr-2 text-sky-400 group-hover:translate-x-1 transition-transform"></i>Products</a>
+                        </li>
+                        <li><a href="#about"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-chevron-right mr-2 text-sky-400 group-hover:translate-x-1 transition-transform"></i>About
+                                Us</a></li>
+                        <li><a href="#contact"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-chevron-right mr-2 text-sky-400 group-hover:translate-x-1 transition-transform"></i>Contact</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i
+                                    class="fas fa-chevron-right mr-2 text-sky-400 group-hover:translate-x-1 transition-transform"></i>Blog</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Customer Service -->
+                <div>
+                    <h5 class="text-xl font-semibold mb-6 text-sky-400">Customer Service</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i class="fas fa-question-circle mr-2 text-sky-400"></i>Help Center</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i class="fas fa-undo mr-2 text-sky-400"></i>Returns & Exchanges</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i class="fas fa-shipping-fast mr-2 text-sky-400"></i>Shipping Info</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i class="fas fa-search mr-2 text-sky-400"></i>Track Your Order</a></li>
+                        <li><a href="#"
+                                class="text-gray-300 hover:text-white transition-colors flex items-center group">
+                                <i class="fas fa-shield-alt mr-2 text-sky-400"></i>Warranty</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h5 class="text-xl font-semibold mb-6 text-sky-400">Get in Touch</h5>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-sky-400 mr-3 mt-1"></i>
+                            <div class="text-gray-300">
+                                <p>123 Innovation Street</p>
+                                <p>Tech Valley, CA 94000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone text-sky-400 mr-3"></i>
+                            <a href="tel:+15551234567" class="text-gray-300 hover:text-white transition-colors">+1 (555)
+                                123-4567</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope text-sky-400 mr-3"></i>
+                            <a href="mailto:support@eshop.com"
+                                class="text-gray-300 hover:text-white transition-colors">support@eshop.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-clock text-sky-400 mr-3"></i>
+                            <span class="text-gray-300">24/7 Customer Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Awards & Certifications -->
+            <div class="border-t border-white/20 pt-8 mb-8">
+                <div class="text-center mb-6">
+                    <h6 class="text-lg font-semibold mb-4 text-sky-400">Trusted by millions worldwide</h6>
+                    <div class="flex justify-center space-x-8 items-center opacity-70">
+                        <div class="text-center">
+                            <i class="fas fa-award text-3xl text-sky-400 mb-2"></i>
+                            <p class="text-sm">Best E-commerce 2025</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-shield-alt text-3xl text-sky-400 mb-2"></i>
+                            <p class="text-sm">SSL Secured</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-star text-3xl text-sky-400 mb-2"></i>
+                            <p class="text-sm">4.9/5 Rating</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-users text-3xl text-sky-400 mb-2"></i>
+                            <p class="text-sm">1M+ Customers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright & Legal -->
+            <div class="border-t border-white/20 pt-8 text-center">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 mb-4 md:mb-0">
+                        &copy; 2025 eShop. All rights reserved. Made with
+                        <i class="fas fa-heart text-red-400 mx-1"></i>
+                        for tech enthusiasts everywhere.
+                    </p>
+                    <div class="flex space-x-6 text-sm">
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Cookie Policy</a>
+                        <a href="#" class="text-gray-300 hover:text-white transition-colors">Accessibility</a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4 class="font-semibold mb-2">Company</h4>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">About Us</a></li>
-            <li><a href="#" class="hover:underline">Careers</a></li>
-            <li><a href="#" class="hover:underline">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-2">Support</h4>
-          <ul class="space-y-1">
-            <li><a href="#" class="hover:underline">Help Center</a></li>
-            <li><a href="#" class="hover:underline">Returns</a></li>
-            <li><a href="#" class="hover:underline">Shipping</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="font-semibold mb-2">Newsletter</h4>
-          <form class="flex gap-2">
-            <input type="email" placeholder="Your email" class="px-3 py-2 rounded-l bg-white text-sky-700 focus:outline-none" />
-            <button type="submit" class="px-4 py-2 bg-sky-700 rounded-r text-white font-bold hover:bg-sky-800">Subscribe</button>
-          </form>
-          <div class="flex gap-3 mt-4">
-            <a href="#" class="hover:text-sky-200"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="hover:text-sky-200"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="hover:text-sky-200"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
-      </div>
-      <div class="text-center text-sky-100 mt-8">&copy; 2025 eShop. All rights reserved.</div>
     </footer>
 
-    <!-- Floating Action Button (Scroll to Top) -->
-    <button id="scrollToTop" class="fixed bottom-8 right-8 bg-gradient-to-r from-sky-400 to-sky-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition hidden z-50">
-      <i class="fa fa-arrow-up"></i>
+    <!-- Floating Action Button -->
+    <button onclick="scrollToTop()"
+        class="fixed bottom-6 right-6 bg-gradient-to-r from-sky-500 to-sky-600 text-white w-14 h-14 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 z-50 opacity-100"
+        id="scrollToTopBtn">
+        <i class="fas fa-arrow-up text-xl"></i>
     </button>
 
     <!-- Custom JavaScript -->
-    <script src="js/index.js"></script>
-  </body>
+    <script src="./js/index.js"></script>
+</body>
+
 </html>
